@@ -1,0 +1,141 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/* reseting the default styles of the browser */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+:root {
+  --primary-color: #fdcc15;
+  --secondary-color: #1f1f1f;
+}
+
+nav {
+  height: 10vh;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px calc((100vw - 1300px) / 2);
+}
+
+.logo {
+  color: var(--secondary-color);
+  font-size: 1.5 rem;
+  font-weight: bold;
+  padding: 0 2rem;
+  font-style: italic;
+}
+
+.logo img {
+  width: 200px;
+  height: 100px;
+  display: inline;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  padding: 0 1.5rem;
+  font-weight: 600;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.nav-items a:hover {
+  color:black;
+  transition: ease-in-out 0.2s;
+  background-color: white;
+}
+
+.body {
+  background: var(--primary-color);
+}
+
+.body-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+  padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--secondary-color);
+  padding: 0rem 2rem;
+}
+
+.column-left h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.column-left p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.column-left button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  color: var(--primary-color);
+  background: #000000;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.column-left button:hover {
+  background: #cbed0c;
+  transition: ease-in-out 0.2s;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.column-right {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 0rem 2rem;
+}
+
+.body-image {
+  width: 100%;
+  height: 100%;
+  border: 2px transparent ;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .body-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-items a {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+  }
+
+  .column-left p {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+}
